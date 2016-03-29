@@ -1,6 +1,10 @@
-=========================
-Alabaster: a Sphinx theme
-=========================
+============================
+sphinxstrap4: a Sphinx theme
+============================
+
+
+Using Alabaster as a starting point, make a Sphinx theme using a modern frontend
+toolchain, but supporting the extension points of ABlog.
 
 What is Alabaster?
 ==================

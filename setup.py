@@ -5,7 +5,7 @@ from setuptools import setup
 
 # Version info -- read without importing
 _locals = {}
-with open('alabaster/_version.py') as fp:
+with open('sphinxstrap4/_version.py') as fp:
     exec(fp.read(), None, _locals)
 version = _locals['__version__']
 
@@ -14,14 +14,14 @@ with codecs.open('README.rst', encoding='utf-8') as f:
     readme = f.read()
 
 setup(
-    name='alabaster',
+    name='sphinxstrap4',
     version=version,
-    description='A configurable sidebar-enabled Sphinx theme',
+    description='Sphinx theme based on Bootstrap 4',
     long_description=readme,
-    author='Jeff Forcier',
-    author_email='jeff@bitprophet.org',
-    url='https://github.com/bitprophet/alabaster',
-    packages=['alabaster'],
+    author='Paul Everitt',
+    author_email='pauleveritt@me.com',
+    url='https://github.com/pauleveritt/sphinxstrap4',
+    packages=['sphinxstrap4'],
     include_package_data=True,
     classifiers=[
         'Intended Audience :: Developers',
