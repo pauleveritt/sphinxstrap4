@@ -15,6 +15,11 @@ with codecs.open('README.rst', encoding='utf-8') as f:
 
 setup(
     name='sphinxstrap4',
+    entry_points={
+        'sphinx_themes': [
+            'path = sphinxstrap4:get_path',
+        ]
+    },
     version=version,
     description='Sphinx theme based on Bootstrap 4',
     long_description=readme,
