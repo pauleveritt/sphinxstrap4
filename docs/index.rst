@@ -9,8 +9,12 @@ Welcome to sphinxstrap4's documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 2
 
+    top1
+    top2
+    top3
+    customizing/index
 
 
 Indices and tables
