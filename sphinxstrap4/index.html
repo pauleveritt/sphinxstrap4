@@ -8,7 +8,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/custom.css">
+    <link rel="stylesheet" href="{{ pathto('_static/css/custom.css', 1) }}">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900,300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,300,600,700,900" rel="stylesheet">
@@ -18,7 +18,12 @@
 <nav class="ss4header navbar navbar-dark bg-inverse navbar-fixed-top">
     <ul class="brand nav navbar-nav">
         <li class="nav-item">
-            <img src="static/img/headshot-closeup.jpg" alt="Paul Everitt" class="img-circle">
+            {%- if logo %}
+            <a href="{{ pathto(master_doc) }}">
+                <img src="{{ pathto('_static/' + logo, 1) }}"
+                     class="img-circle" alt="Logo"/>
+            </a>
+            {%- endif %}
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">Paul Everitt</a>

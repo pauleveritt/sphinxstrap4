@@ -13,3 +13,5 @@ into less-noisy templates.
 - Force that to be dependent on BS3, fixed navbar, and fluid
 
 - No right sidebar
+
+- Make a new Bootstrap 4 static page and start pouring dynamicism into it, bit by bit
