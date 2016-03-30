@@ -14,14 +14,8 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
-.mx-width {
-    max-width: 960px;
-    margin: 0 auto;
-}
-
 a, a:hover {
     color: #563d7c;
-    text-decoration: none;
 }
 
 img {
@@ -30,63 +24,38 @@ img {
     height: auto;
 }
 
-.card-img-top {
-    width: 100%;
-    height: auto;
-}
-
 /* Header
 -------------------------------------------------*/
 
-.jumbotron {
-    padding-bottom: 50px;
-}
-
-.jumbotron-fluid {
-    padding: 0;
-}
-
-#header {
+.ss4header {
     font-family: 'Lato', sans-serif;
     height: 56px;
 }
 
-#header #searchbox {
-    height: 28px;
-    padding-top: 0;
-    margin-top: 8px;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-
-
-
 /* Jumbotron
 -------------------------------------------------*/
 
+.ss4jumbotron {
+    padding: 0 0;
+    font-family: 'Lato', sans-serif;
+}
 
-/* Article
--------------------------------------------------*/
-
-
-/* Footer
--------------------------------------------------*/
-
-
-/* Montage
--------------------------------------------------*/
-#montage {
+.ss4montage {
     background-image: url('../img/montage.jpg');
 }
 
-.montage-heading {
+.ss4montage-banner {
+    height: 480px;
+    padding-top: 170px;
+}
+
+.ss4montage-heading {
     font-size: 60px;
     line-height: 1;
     color: #fff
 }
 
-.montage-subheading {
-    font-family: 'Lato', sans-serif;
+.ss4montage-subheading {
     font-size: 27px;
     line-height: 1.4;
     font-weight: 300;
@@ -106,10 +75,9 @@ img {
     background: url('../img/pattern.png') repeat;
 }
 
-#montage-banner {
-    height: 480px;
-    padding-top: 170px;
-}
+
+/* Article
+-------------------------------------------------*/
 
 #preamble {
     font-family: 'Lato', serif;
@@ -130,6 +98,7 @@ img {
     background-color: transparent;
     margin-bottom: 0;
 }
+
 
 /* HEADING
 -------------------------------------------------*/
@@ -158,7 +127,6 @@ img {
 #site-title {
     max-width: 150px;
 }
-
 
 /* FOOTER
 -------------------------------------------------*/
