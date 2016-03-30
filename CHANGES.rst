@@ -12,3 +12,4 @@ into less-noisy templates.
 
 - Force that to be dependent on BS3, fixed navbar, and fluid
 
+- No right sidebar
