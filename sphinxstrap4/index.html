@@ -41,8 +41,11 @@
             <a class="nav-link" href="#">About</a>
         </li>
         <li class="nav-item">
-            <form class="form-inline">
-                <input class="form-control form-control-sm" placeholder="Search..." type="text">
+            <form class="form-inline" action="{{ pathto('search') }}" method="get">
+                <input class="form-control form-control-sm" placeholder="Search..."
+                       name="q" type="text">
+                <input type="hidden" name="check_keywords" value="yes"/>
+                <input type="hidden" name="area" value="default"/>
             </form>
         </li>
     </ul>
