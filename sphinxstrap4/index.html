@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Boostrap 4 - Tutorial</title>
+    <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,6 +30,7 @@
         </li>
     </ul>
     <ul class="nav navbar-nav pull-right">
+
         <li class="nav-item">
             <a class="nav-link" href="#">Blog</a>
         </li>
@@ -63,22 +64,29 @@
             <div class="col-md-8 col-md-offset-2">
                 <section id="preamble">
                     <div class="heading text-center">
-                        <h2>Using Docker in PyCharm</h2>
+                        <h2>{{ title|striptags|e }}</h2>
                         <nav id="navigation" class="navbar">
                             <ol class="nav navbar-nav breadcrumb pull-left">
-                                <li><strong>In:</strong> <a href="#">Polyglot</a></li>
-                                <li><a href="#">Getting Started and more with Docker</a></li>
+                                {%- for parent in parents %}
+                                <li>
+                                    {% if loop.last %}<strong>In:</strong>{% endif %}
+                                    <a href="{{ parent.link|e }}">{{ parent.title}}</a>
+                                </li>
+                                {%- endfor %}
+
                             </ol>
+
                             <ul class="nav navbar-nav pull-right">
+                                {%- if prev %}
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Up</a>
+                                    <a class="nav-link" href="{{ prev.link|e }}">Previous</a>
                                 </li>
+                                {%- endif %}
+                                {%- if next %}
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Previous</a>
+                                    <a class="nav-link" href="{{ next.link|e }}">Next</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Next</a>
-                                </li>
+                                {%- endif %}
                             </ul>
                         </nav>
                         <div class="heading text-center">

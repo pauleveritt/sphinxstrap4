@@ -36,6 +36,7 @@ img {
 -------------------------------------------------*/
 
 .ss4jumbotron {
+    display: none;
     padding: 0 0;
     font-family: 'Lato', sans-serif;
 }
@@ -79,6 +80,9 @@ img {
 /* Article
 -------------------------------------------------*/
 
+.ss4article {
+    margin-top: 2em;
+}
 #preamble {
     font-family: 'Lato', serif;
 }
