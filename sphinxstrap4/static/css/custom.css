@@ -1,7 +1,7 @@
 /* GENERAL STYLES
 -------------------------------------------------*/
 body {
-    font-family: 'Lora', sans-serif;
+    font-family: 'Lora', serif;
     font-size: 1.2em;
     font-weight: 300;
     line-height: 1.7;
@@ -156,7 +156,9 @@ div.code-block-caption:hover > a.headerlink {
 footer {
     background: #563d7c;
     margin-top: 120px;
-    position: relative
+    position: relative;
+    color: #fff;
+    font-family: 'Lato', serif;
 }
 
 footer .container {
@@ -176,7 +178,6 @@ footer ul li {
     text-align: center;
     display: inline-block;
     background: rgba(0, 0, 0, 0.2);
-    color: #fff;
     line-height: 45px;
     margin: 0 4px;
     width: 45px !important;
