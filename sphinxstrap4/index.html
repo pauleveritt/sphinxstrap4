@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ theme_lang }}">
 <head>
+    {%- set titlesuffix = " &mdash; "|safe + docstitle|e %}
     <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
