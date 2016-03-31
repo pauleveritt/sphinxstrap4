@@ -123,6 +123,14 @@ div.code-block-caption:hover > a.headerlink {
     margin-bottom: 0;
 }
 
+/* Content
+-------------------------------------------------*/
+
+/* sphinx adds the doctitle in the body, we need to hide it */
+#content .section:first-of-type h1:first-of-type {
+    display: none;
+}
+
 /* HEADING
 -------------------------------------------------*/
 .heading {
