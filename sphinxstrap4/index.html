@@ -8,12 +8,17 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ pathto('_static/basic.css', 1) }}" type="text/css">
+    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css">
     <link rel="stylesheet" href="{{ pathto('_static/css/custom.css', 1) }}">
-
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900,300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,300,600,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+    <link href="{{ pathto('_static/img/favicon.ico', 1) }}" rel="icon" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    {%- block extrahead %} {% endblock %}
 </head>
 <body>
 {%- set is_home = pathto('index') == '#' %}
@@ -29,7 +34,7 @@
             {%- endif %}
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Paul Everitt</a>
+            <a class="nav-link" href="{{ pathto(master_doc) }}">Paul Everitt</a>
         </li>
     </ul>
     <ul class="nav navbar-nav pull-right">
@@ -149,11 +154,6 @@
 {%- for scriptfile in script_files %}
 <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
 {%- endfor %}
-<script type="text/javascript">
-    jQuery(function () {
-        Search.loadIndex("{{ pathto('searchindex.js', 1) }}");
-    });
-</script>
 
 
 </body>
