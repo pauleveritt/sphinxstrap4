@@ -43,7 +43,7 @@
         {%- if theme_navigation %}
         {%- for nav in theme_navigation %}
         <li class="nav-item">
-            <a class="nav-link"  href="{{ nav.link|e }}">{{ nav.title}}</a>
+            <a class="nav-link" href="{{ nav.link|e }}">{{ nav.title}}</a>
         </li>
         {%- endfor %}
         {%- endif %}
@@ -80,7 +80,13 @@
                 <section id="preamble">
                     <div class="heading text-center">
                         <h2>{{ title|striptags|e }}</h2>
+                        {% set post = ablog[pagename] %}
+                        {% if post.date %}
+                        <div class="postdate">{{ post.date.strftime(gettext(ablog.post_date_format)) }}</div>
+                        {% endif %}
+
                         <nav id="navigation" class="navbar">
+                            {% if parents or prev or next %}
                             <ol class="nav navbar-nav breadcrumb pull-left">
                                 {%- for parent in parents %}
                                 <li>
@@ -103,14 +109,11 @@
                                 </li>
                                 {%- endif %}
                             </ul>
+
+                            {% endif %}
                         </nav>
-                        <div class="heading text-center">
+                        <div style="display: none" class="heading text-center">
                             <p class="lead">
-                                <mark>Bootstrap</mark>
-                                is the world’s most popular framework for building responsive, mobile-first sites and
-                                applications. Inside you’ll find high quality HTML, CSS, and JavaScript to make starting
-                                any
-                                project easier than ever.
                             </p>
                         </div>
                     </div>

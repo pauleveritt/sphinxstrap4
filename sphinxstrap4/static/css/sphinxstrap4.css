@@ -107,6 +107,14 @@ div.code-block-caption:hover > a.headerlink {
     font-family: 'Lato', serif;
 }
 
+#preamble .postdate {
+    font-weight: 300;
+}
+
+#preamble .nav strong {
+    padding-right: 0.5em;
+}
+
 #preamble .lead {
     font-size: smaller;
 
