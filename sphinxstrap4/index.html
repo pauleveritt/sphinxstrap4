@@ -135,7 +135,9 @@
                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                     <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
                 </ul>
-                <div>&copy; 2016 - Paul Everitt</div>
+                {%- if show_copyright %}
+                {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
+                {%- endif %}
             </div>
         </div>
     </div>
