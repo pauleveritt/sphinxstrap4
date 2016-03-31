@@ -130,10 +130,26 @@
         <div class="row">
             <div class="col-lg-12 text-lg-center">
                 <ul>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                    {%- if theme_github_user %}
+                    <li><a href="https://github.com/{{theme_github_user}}">
+                        <i class="fa fa-github"></i>
+                    </a></li>
+                    {%- endif %}
+                    {%- if theme_twitter_user %}
+                    <li><a href="https://twitter.com/{{theme_twitter_user}}">
+                        <i class="fa fa-twitter"></i>
+                    </a></li>
+                    {%- endif %}
+                    {%- if theme_linkedin_user %}
+                    <li><a href="https://linkedin.com/in/{{theme_linkedin_user}}">
+                        <i class="fa fa-linkedin"></i>
+                    </a></li>
+                    {%- endif %}
+                    {%- if theme_facebook_user %}
+                    <li><a href="https://facebook.com/{{theme_facebook_user}}">
+                        <i class="fa fa-facebook"></i>
+                    </a></li>
+                    {%- endif %}
                 </ul>
                 {%- if show_copyright %}
                 {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
