@@ -1,8 +1,8 @@
 /* GENERAL STYLES
 -------------------------------------------------*/
 body {
-    font-family: 'Lora', serif;
-    font-size: 1.2em;
+    font-family: 'Lora', Georgia, Times, serif;
+    font-size: 18px;
     font-weight: 300;
     line-height: 1.7;
     overflow-x: hidden;
@@ -62,7 +62,7 @@ div.code-block-caption:hover > a.headerlink {
 }
 
 .ss4montage {
-    background-image: url('../img/montage.jpg');
+    background-image: url('../img/pattern.png');
 }
 
 .ss4montage-banner {
@@ -137,6 +137,11 @@ div.code-block-caption:hover > a.headerlink {
 /* sphinx adds the doctitle in the body, we need to hide it */
 #content .section:first-of-type h1:first-of-type {
     display: none;
+}
+
+div.note {
+    background-color: #EEE;
+    border: 1px solid #CCC;
 }
 
 /* HEADING
