@@ -23,6 +23,10 @@
     <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css"/>
     {%- endfor %}
 
+    {%- for scriptfile in script_files %}
+    <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
+    {%- endfor %}
+
     {%- block extrahead %} {% endblock %}
 </head>
 <body>
@@ -68,9 +72,7 @@
     <div class="ss4montage parallax text-center">
         <div class="parallax-pattern-overlay">
             <div class="ss4montage-banner container text-center">
-                <h3 class="ss4montage-subheading">Blog posts and technical articles on <br>
-                    Python and PyCharm, <br>
-                    Web and WebStorm.</h3>
+                <h3 class="ss4montage-subheading">{{theme_description}}</h3>
             </div>
         </div>
     </div>
@@ -169,18 +171,14 @@
 </footer>
 
 <script type="text/javascript">
-    var DOCUMENTATION_OPTIONS = {
-        URL_ROOT: '{{ url_root }}',
-        VERSION: '{{ release|e }}',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '{{ "" if no_search_suffix else file_suffix }}'
-    };
+  var DOCUMENTATION_OPTIONS = {
+    URL_ROOT:    '{{ pathto('', 1) }}',
+    VERSION:     '{{ release|e }}',
+    COLLAPSE_INDEX: false,
+    FILE_SUFFIX: '{{ '' if no_search_suffix else file_suffix }}',
+    HAS_SOURCE:  {{ has_source|lower }}
+  };
 </script>
-
-
-{%- for scriptfile in script_files %}
-<script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
-{%- endfor %}
 
 
 </body>
