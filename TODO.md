@@ -1,9 +1,5 @@
 ## Soon
 
-- Make montage text width less
-
-- Get subheading text out of subheading, into theme options
-
 ## After
 
 - Combine layout.html and index.html
@@ -32,6 +28,8 @@
 
 - Get excerpts working again
 
+- When searching, search results box isn't supplied with search term
+
 ## Later
 
 - Improved search page
@@ -43,8 +41,12 @@
 
 - Have a development mode driven more by browser sync
 
+- Montage photo clipped at top by navbar
+
 ## Done
 
 - "Note" styling
 
 - Elimate all custom font sizing and adopt BS4 typography
+
+- Get subheading text out of subheading, into theme options
