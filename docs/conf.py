@@ -300,3 +300,23 @@ texinfo_documents = [
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'https://docs.python.org/': None}
+
+# Some sphinxstrap mocks for use in ablog
+from datetime import datetime
+
+d = {'date': datetime.now()}
+html_context = dict(
+    ablog={
+        'post_date_format': '%b %d, %Y',
+        'index': d,
+        'top1': d,
+        'top2': d,
+        'top3': d,
+        'genindex': d,
+        'search': d,
+        'customizing/index': d,
+        'customizing/top1': d,
+        'customizing/top2': d,
+        'customizing/top3': d
+    }
+)

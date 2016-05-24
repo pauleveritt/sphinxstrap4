@@ -1,5 +1,7 @@
 ## Soon
 
+- Get the stupid montage photo to appear correctly, not chopped off
+
 ## After
 
 - Combine layout.html and index.html
