@@ -116,9 +116,17 @@ html_theme = 'sphinxstrap4'
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
+    'description': '''Blog posts and technical articles on <br>
+    Python and PyCharm, <br>
+    Web and WebStorm.''',
     'github_user': 'pauleveritt',
     'twitter_user': 'paulweveritt',
-    'linkedin_user': 'paeveritt'
+    'linkedin_user': 'paeveritt',
+    'navigation': [
+        {'title': 'Blog', 'link': '/blog/'},
+        {'title': 'Polyglot', 'link': '/polyglot/'},
+        {'title': 'About', 'link': '/about/'}
+    ],
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
