@@ -1,8 +1,22 @@
-## Soon
+## Sass branch
 
-- Get the stupid montage photo to appear correctly, not chopped off
+- package.json
+
+- Webpack and webpack-dev-server for reload
+
+- Get rid of watchman and ablog dev run configuration
+
+- Exact same output, but using SASS
+
+## Montage branch
+
+- Convert markup to be like ng2-sphinx
+
+- Have montage that doesn't look so bad
 
 ## After
+
+- Some concept of "series"
 
 - Combine layout.html and index.html
 
