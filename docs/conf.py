@@ -116,8 +116,8 @@ html_theme = 'sphinxstrap4'
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    'description': '''Blog posts and technical articles on <br>
-    Python and PyCharm, <br>
+    'description': '''Blog posts and technical articles on
+    Python and PyCharm,
     Web and WebStorm.''',
     'github_user': 'pauleveritt',
     'twitter_user': 'paulweveritt',
