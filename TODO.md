@@ -1,19 +1,3 @@
-## Sass branch
-
-- package.json
-
-- Webpack and webpack-dev-server for reload
-
-- Get rid of watchman and ablog dev run configuration
-
-- Exact same output, but using SASS
-
-## Montage branch
-
-- Convert markup to be like ng2-sphinx
-
-- Have montage that doesn't look so bad
-
 ## After
 
 - Some concept of "series"
