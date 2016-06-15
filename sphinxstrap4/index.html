@@ -31,6 +31,7 @@
 </head>
 <body>
 {%- set is_home = pathto('index') == '#' %}
+
 <nav id="ng2ss-nav" class="navbar navbar-dark bg-inverse navbar-fixed-top">
     <a class="navbar-brand" href="{{ pathto(master_doc) }}">
         <img src="{{ pathto('_static/' + logo, 1) }}" alt="Logo" class="img-circle">
@@ -63,7 +64,7 @@
 
 
 {%- if is_home %}
-<section class="jumbotron" style="background-image: url('_static/montage.jpg'); height: 450px">
+<section id="montage" class="jumbotron" style="background-image: url('{{theme_montage}}')">
 </section>
 
 <section id="home-blurb">
@@ -76,44 +77,36 @@
     </div>
 </section>
 
-<section style="display: none" class="ss4jumbotron jumbotron">
-    <div class="ss4montage parallax text-center">
-        <div class="parallax-pattern-overlay">
-            <div class="ss4montage-banner container text-center">
-                <h3 class="ss4montage-subheading">{{theme_description}}</h3>
-            </div>
-        </div>
-    </div>
-</section>
-
 {%- else %}
 
 
-<article class="ss4article">
+<article id="article">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                {%- if not is_home %}
                 <section id="preamble">
-                    <div class="heading text-center">
-                        <h2>{{ title|striptags|e }}</h2>
+                    <div class="text-xs-center">
+                        <h1>{{ title|striptags|e }}</h1>
                         {% set post = ablog[pagename] %}
                         {% if post.date %}
-                        <div class="postdate">{{ post.date.strftime(gettext(ablog.post_date_format)) }}</div>
+                        <h6 class="postdate">{{ post.date.strftime(gettext(ablog.post_date_format)) }}</h6>
                         {% endif %}
 
-                        <nav id="navigation" class="navbar">
-                            {% if parents or prev or next %}
+                        {% if parents %}
+                        <nav class="ui navbar">
+                            {% if parents %}
                             <ol class="nav navbar-nav breadcrumb pull-left">
                                 {%- for parent in parents %}
                                 <li>
                                     {% if loop.first %}<strong>In:</strong>{% endif %}
-                                    <a href="{{ parent.link|e }}">{{ parent.title}}</a>
+                                    <a href="{{ parent.link|e }}">Parent {{ parent.title}}</a>
                                 </li>
                                 {%- endfor %}
 
                             </ol>
+                            {%- endif %}
 
+                            {% if prev or next %}
                             <ul class="nav navbar-nav pull-right">
                                 {%- if prev %}
                                 <li class="nav-item">
@@ -126,16 +119,16 @@
                                 </li>
                                 {%- endif %}
                             </ul>
+                            {%- endif %}
 
-                            {% endif %}
                         </nav>
+                        {% endif %}
                         <div style="display: none" class="heading text-center">
                             <p class="lead">
                             </p>
                         </div>
                     </div>
                 </section>
-                {%- endif %}
                 <section id="content">
 
                     {% block body %} {% endblock %}
@@ -192,48 +185,19 @@
     </div>
 </footer>
 
-<footer style="display: none" class="footer" id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-lg-center">
-                <ul>
-                    {%- if theme_github_user %}
-                    <li><a href="https://github.com/{{theme_github_user}}">
-                        <i class="fa fa-github"></i>
-                    </a></li>
-                    {%- endif %}
-                    {%- if theme_twitter_user %}
-                    <li><a href="https://twitter.com/{{theme_twitter_user}}">
-                        <i class="fa fa-twitter"></i>
-                    </a></li>
-                    {%- endif %}
-                    {%- if theme_linkedin_user %}
-                    <li><a href="https://linkedin.com/in/{{theme_linkedin_user}}">
-                        <i class="fa fa-linkedin"></i>
-                    </a></li>
-                    {%- endif %}
-                    {%- if theme_facebook_user %}
-                    <li><a href="https://facebook.com/{{theme_facebook_user}}">
-                        <i class="fa fa-facebook"></i>
-                    </a></li>
-                    {%- endif %}
-                </ul>
-                {%- if show_copyright %}
-                {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
-                {%- endif %}
-            </div>
-        </div>
-    </div>
-</footer>
-
 <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
         URL_ROOT: '{{ pathto("", 1) }}',
         VERSION: '{{ release|e }}',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '{{ "" if no_search_suffix else file_suffix }}',
-        HAS_SOURCE: {{ has_source | lower }}
-    };
+        HAS_SOURCE: {
+    {
+        has_source | lower
+    }
+    }
+    }
+    ;
 </script>
 
 

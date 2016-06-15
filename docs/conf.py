@@ -122,6 +122,7 @@ html_theme_options = {
     'github_user': 'pauleveritt',
     'twitter_user': 'paulweveritt',
     'linkedin_user': 'paeveritt',
+    'montage': '_static/montage.jpg',
     'navigation': [
         {'title': 'Blog', 'link': '/blog/'},
         {'title': 'Polyglot', 'link': '/polyglot/'},
