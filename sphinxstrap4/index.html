@@ -65,13 +65,11 @@
 
 {%- if is_home %}
 <section id="montage" class="jumbotron" style="background-image: url('{{theme_montage}}')">
-</section>
 
-<section id="home-blurb">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                {{theme_description}}
+            <div id="montage-text" class="ui col-md-8 col-md-offset-2">
+                <h4>{{theme_description}}</h4>
             </div>
         </div>
     </div>
@@ -191,13 +189,8 @@
         VERSION: '{{ release|e }}',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '{{ "" if no_search_suffix else file_suffix }}',
-        HAS_SOURCE: {
-    {
-        has_source | lower
-    }
-    }
-    }
-    ;
+        HAS_SOURCE: {{ has_source | lower }}
+    };
 </script>
 
 
